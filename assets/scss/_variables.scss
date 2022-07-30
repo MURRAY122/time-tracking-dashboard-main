@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+//Background Colors
+$blue: hsl(246, 80%, 60%);
+$light-orange: hsl(15, 100%, 70%);
+$soft-blue: hsl(195, 74%, 62%);
+$light-red: hsl(348, 100%, 68%);
+$lime-green: hsl(145, 58%, 55%);
+$Violet: hsl(264, 64%, 52%);
+$soft-orange: hsl(43, 84%, 65%);
+$very-dark-blue: hsl(226, 43%, 10%);
+$dark-blue: hsl(235, 46%, 20%);
+$darker-desaturated-blue: hsl(235, 45%, 48%); //(Added for accessibility)
+
+//Font color
+$desaturated-blue: hsl(239, 46%, 79%); //(Altered for accessibility)
+$pale-Blue: hsl(0, 0%, 90%); //(Altered for accessibility)
+$white: hsl(0, 0%, 100%);
+
+//Font Family
+$font-family: 'Rubik', sans-serif;
+
+//Font sizes
+$font-sm: 0.938rem;
+$font-md: 1.125rem;
+$font-lg: 1.625rem;
+$font-xlg: 2.688rem;
+$font-xxlg: 3.5rem;

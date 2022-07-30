@@ -1,0 +1,180 @@
+@use "./variables" as v;
+@use "./mixins" as u;
+
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 1rem;
+
+  @include u.breakpoint-up(large){
+    flex-direction: row;
+  }
+  
+  &__profile{
+    display: flex;
+    flex-direction: column;
+    background-color: v.$dark-blue;
+    border-radius: 1rem;
+
+    &__content{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+      background-color: v.$blue;
+      border-radius: 1rem;
+      color: v.$pale-Blue;
+
+      @include u.breakpoint-up(large){
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 13.4375rem;
+        height: 16.438rem;
+        gap: 2rem;
+        padding: 2rem 2rem 4rem 2rem;
+      }
+
+      img{
+        width: 3.5rem;
+        height: 3.5rem;
+        border: 0.219rem solid white;
+        border-radius: 100%;
+        
+        @include u.breakpoint-up(large){
+          width: 5.25rem;
+          height: 5.25rem;
+        }
+      }
+      p{
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+      }
+      h1{
+        color: v.$white;
+        margin: 0;
+        font-size: v.$font-lg;
+        font-weight: 300;
+
+        @include u.breakpoint-up(large){
+          font-size: v.$font-xlg;
+        }
+      }
+    }
+
+    &__links{
+      display: flex;
+      justify-content: space-around;
+      @include u.breakpoint-up(large){
+        margin: 1rem;
+        flex-direction: column;
+
+        &>a{
+          margin: 1rem;
+        }
+      }
+      
+    }
+  }
+
+  &__stats{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    overflow: hidden;
+
+    @include u.breakpoint-up(medium){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include u.breakpoint-up(large){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @include u.breakpoint-up(xlarge){
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    &__card{
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+      background-color: v.$light-orange;
+
+      @include u.breakpoint-up(medium){
+        width: 17.5rem;
+      }
+
+      &__img{
+        background-image: url(../images/icon-work.svg);
+        background-repeat: no-repeat;
+        background-position: 94% 30%;
+        background-size: 4.688rem;
+        padding: 1rem;
+
+        @include u.breakpoint-up(large){
+          padding: 1.5rem;
+        }
+      }
+
+      &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1.5rem;
+        background-color: v.$dark-blue;
+        border-radius: .8rem;
+        height: 100%;
+
+        &:hover{
+          cursor: pointer;
+          background-color: v.$darker-desaturated-blue;
+        }
+
+        &__title{
+          color: v.$white;
+          font-weight: 500;
+
+          &>span{
+            float: right;
+
+            &>svg{
+              cursor: pointer;
+              &:hover{
+                &>path{
+                fill: white;
+              }
+            }
+            }
+          }
+        }
+
+        &__time{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0rem 0rem .4rem 0rem;
+          font-size: v.$font-lg;
+          font-weight: 300;
+
+          @include u.breakpoint-up(medium){
+            align-items: flex-start;
+            flex-direction: column;
+            font-size: v.$font-xxlg;
+          }
+          
+
+          &>span{
+            font-size: v.$font-sm;
+            font-weight: 400;
+            color: v.$pale-Blue;
+            padding-top: .5rem;
+          }
+        }
+      }
+    }
+  }
+
+}

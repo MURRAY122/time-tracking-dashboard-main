@@ -1,0 +1,53 @@
+@use "./variables" as v;
+@use "./mixins" as u;
+
+html{
+  height: 100vh;
+}
+
+body{
+    display: grid;
+    min-height: 100%;
+    background-color: v.$very-dark-blue;
+    font-family: v.$font-family;
+    font-size: v.$font-md;
+    color: v.$white;
+
+    @include u.breakpoint-up(medium){
+      align-content: center;
+    }
+}
+
+.grid{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  margin: 1.5rem 1rem;
+  color: v.$desaturated-blue;
+  text-decoration: none;
+
+  &:hover{
+    color: v.$white;
+  }
+}
+
+.active{
+  color: v.$white;
+}
+
+
+footer{
+  a{
+    margin: .1rem;
+  }
+    .attribution {
+        font-size: 0.688rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 72%);
+      }
+}
