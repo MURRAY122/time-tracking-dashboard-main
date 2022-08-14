@@ -23,12 +23,16 @@ body {
   align-items: center;
 }
 
-a {
-  margin: 1.5rem 1rem;
+button {
+  margin: 1rem 1rem;
   color: hsl(239deg, 46%, 79%);
   text-decoration: none;
+  font-size: 1.125rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
-a:hover {
+button:hover {
   color: hsl(0deg, 0%, 100%);
 }
 
@@ -36,14 +40,12 @@ a:hover {
   color: hsl(0deg, 0%, 100%);
 }
 
-footer a {
-  margin: 0.1rem;
-}
-footer .attribution {
+.attribution {
   font-size: 0.688rem;
   text-align: center;
 }
-footer .attribution a {
+.attribution a {
+  margin: 0.1rem;
   color: hsl(228deg, 45%, 72%);
 }
 
@@ -66,13 +68,20 @@ footer .attribution a {
 }
 .section__profile__content {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   gap: 1rem;
   padding: 2rem;
   background-color: hsl(246deg, 80%, 60%);
   border-radius: 1rem;
   color: hsl(0deg, 0%, 90%);
+  text-align: center;
+}
+@media (min-width: 23.4375em) {
+  .section__profile__content {
+    flex-direction: row;
+    text-align: unset;
+  }
 }
 @media (min-width: 61.25em) {
   .section__profile__content {
@@ -85,8 +94,8 @@ footer .attribution a {
   }
 }
 .section__profile__content img {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   border: 0.219rem solid white;
   border-radius: 100%;
 }
@@ -115,14 +124,13 @@ footer .attribution a {
 .section__profile__links {
   display: flex;
   justify-content: space-around;
+  margin: 0.5rem 0;
 }
 @media (min-width: 61.25em) {
   .section__profile__links {
     margin: 1rem;
     flex-direction: column;
-  }
-  .section__profile__links > a {
-    margin: 1rem;
+    align-items: start;
   }
 }
 .section__stats {
@@ -154,11 +162,10 @@ footer .attribution a {
 }
 @media (min-width: 45.5em) {
   .section__stats__card {
-    width: 17.5rem;
+    width: 15.5rem;
   }
 }
 .section__stats__card__img {
-  background-image: url(../images/icon-work.svg);
   background-repeat: no-repeat;
   background-position: 94% 30%;
   background-size: 4.688rem;

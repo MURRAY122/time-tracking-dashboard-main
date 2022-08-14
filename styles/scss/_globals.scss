@@ -24,10 +24,14 @@ body{
   align-items: center;
 }
 
-a{
-  margin: 1.5rem 1rem;
+button{
+  margin: 1rem 1rem;
   color: v.$desaturated-blue;
   text-decoration: none;
+  font-size: v.$font-md;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 
   &:hover{
     color: v.$white;
@@ -38,16 +42,12 @@ a{
   color: v.$white;
 }
 
+.attribution {
+    font-size: 0.688rem;
+    text-align: center;
 
-footer{
-  a{
-    margin: .1rem;
+    a {
+      margin: .1rem;
+      color: hsl(228, 45%, 72%);
+    }
   }
-    .attribution {
-        font-size: 0.688rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 72%);
-      }
-}

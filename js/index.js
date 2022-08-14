@@ -33,7 +33,8 @@ function setCardImg(title, div){
    }
    // Add the svg image
    title = title + ".svg";
-   div.style.backgroundImage = "url("+imgBaseUrl + title+")";
+   div.style.backgroundImage = "url("+imgBaseUrl + title +")";
+   
 }
 
 /* Builds a stats card for each object in data */

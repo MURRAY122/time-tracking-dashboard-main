@@ -8,13 +8,13 @@
     <meta name="author" content="Michael Murray" />
     <!-- Links -->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./styles/css/styles.css" />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
     <main class="grid">
-      <div class="section">
+      <section class="section">
         <!-- Profile section and links -->
         <div class="section__profile">
           <div class="section__profile__content">
@@ -25,21 +25,22 @@
             </div>
           </div>
           <div class="section__profile__links">
-            <a id="daily" href="#" onclick="updateDisplay('daily')">Daily</a>
-            <a id="weekly" href="#" onclick="updateDisplay('weekly')" class="active">Weekly</a>
-            <a id="monthly" href="#" onclick="updateDisplay('monthly')">Monthly</a>
+            <button id="daily" href="#" onclick="updateDisplay('daily')">Daily</button>
+            <button id="weekly" href="#" onclick="updateDisplay('weekly')" class="active">Weekly</button>
+            <button id="monthly" href="#" onclick="updateDisplay('monthly')">Monthly</button>
           </div>
         </div>
 
         <!-- Stats section -->
         <div id="stats_box" class="section__stats"></div>
-      </div>
+      </section>
     </main>
-    <footer>
-      <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://mryanmurray.herokuapp.com/">Michael Murray</a>.
-      </div>
+    <footer class="attribution">
+      <p>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. Coded by
+        <a href="https://www.frontendmentor.io/profile/MURRAY122" target="_blank" rel="noopener noreferrer">MURRAY122</a>.
+      </p>
     </footer>
   </body>
-  <script src="./assets/js/index.js"></script>
+  <script src="./js/index.js"></script>
 </html>
